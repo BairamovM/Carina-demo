@@ -25,3 +25,7 @@ mvn clean eclipse:eclipse
 mvn clean test -Dsuite=api
 ```
 
+### How Start work with Cucumber (Gherkin)
+* Add Maven Dependency: cucumber-java, cucumber-testng, gherkin, cucumber-gherkin
+* Install IntelliJ IDE plugins: 
+

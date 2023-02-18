@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true"
           name="C:/Users/Neuromancer/IdeaProjects/carina-demo/src/test/resources/testng_suites/rozetka">
         <classes>
-            <class name="com.qaprosoft.carina.demo.rozetka.cucumber.HomepageTest" />
+            <class name="com.qaprosoft.carina.demo.rozetka.cucumber.HomePageRunnerTest" />
         </classes>
     </test>
 </suite>

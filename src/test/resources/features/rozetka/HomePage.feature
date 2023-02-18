@@ -1,4 +1,5 @@
 Feature: HomePage
+  Checking all functionality, that related with Home Page
 
   # Information Template example for each Test Scenario
   #---------------------------------------------------------------------------------------------------------------------
