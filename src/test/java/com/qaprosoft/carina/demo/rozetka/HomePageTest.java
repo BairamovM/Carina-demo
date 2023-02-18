@@ -1,5 +1,6 @@
 package com.qaprosoft.carina.demo.rozetka;
 
+import com.qaprosoft.carina.demo.gui.rozetka.components.HamburgerMenu;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,10 +19,9 @@ public class HomePageTest implements IAbstractTest {
 
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
-      //  Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
 
         HeaderMenu headerMenu = homePage.getHeaderMenu();
-        Assert.assertTrue(headerMenu.isHeaderMenuButtonPresent(), "HeaderMenuButton is not Present");
+        Assert.assertTrue(headerMenu.isHamburgerMenuButtonPresent(), "HamburgerMenuButton is not Present");
         Assert.assertTrue(headerMenu.isHomePageLogoPresent(), "HomePageLogo is not Present");
         Assert.assertTrue(headerMenu.isCatalogButtonPresent(), "CatalogButton is not Present");
         Assert.assertTrue(headerMenu.isSearchPresent(), "Search is not Present");
@@ -35,6 +35,10 @@ public class HomePageTest implements IAbstractTest {
         headerMenu.searchProduct("Iphone");
         pause(5);
 
+
+        HamburgerMenu hamburgerMenu = headerMenu.clickHamburgerMenuButton();
+        hamburgerMenu.closeHamburgerMenu();
+        pause(5);
     }
 
 }

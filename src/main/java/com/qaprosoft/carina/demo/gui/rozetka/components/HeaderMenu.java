@@ -17,7 +17,10 @@ public class HeaderMenu extends AbstractUIObject {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
     @FindBy(xpath = "//button[contains(@class, 'header__button ng-tns')]")
-    private ExtendedWebElement headerMenuButton;
+    private ExtendedWebElement hamburgerMenuButton;
+
+    @FindBy(xpath = "//div[contains(@id, 'cdk-overlay')]")
+    private HamburgerMenu hamburgerMenu;
 
     @FindBy(xpath = "//a[@class='header__logo']")
     private ExtendedWebElement homePageLogoButton;
@@ -54,12 +57,13 @@ public class HeaderMenu extends AbstractUIObject {
         super(driver, searchContext);
     }
 
-    public boolean isHeaderMenuButtonPresent() {
-        return headerMenuButton.isElementPresent();
+    public boolean isHamburgerMenuButtonPresent() {
+        return hamburgerMenuButton.isElementPresent();
     }
 
-    public void clickHeaderMenuButton() {
-        headerMenuButton.click();
+    public HamburgerMenu clickHamburgerMenuButton() {
+        hamburgerMenuButton.click();
+        return hamburgerMenu;
     }
 
     public boolean isHomePageLogoPresent() {
