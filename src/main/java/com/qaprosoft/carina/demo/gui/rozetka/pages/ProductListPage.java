@@ -14,7 +14,7 @@ public class ProductListPage extends AbstractPage {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-    @FindBy(xpath = "//h1[contains(@class, 'catalog-heading')]")
+    @FindBy(xpath = "//div[@class='ng-star-inserted']//h1")
     private ExtendedWebElement plpTitle;
 
     public ProductListPage(WebDriver driver) {
