@@ -2,6 +2,7 @@ package com.qaprosoft.carina.demo.gui.rozetka.components;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractUIObject;
+import com.qaprosoft.carina.demo.gui.rozetka.constants.TimeOut;
 import com.qaprosoft.carina.demo.gui.rozetka.pages.HomePage;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
@@ -39,6 +40,7 @@ public class HamburgerMenu extends AbstractUIObject {
     }
 
     public HomePage closeHamburgerMenu() {
+        pause(TimeOut.FIVE_SEC);
         closeButton.click();
         return new HomePage(getDriver());
     }

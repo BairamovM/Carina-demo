@@ -22,6 +22,7 @@ public class ProductListPage extends AbstractPage {
     }
 
     public boolean isPLPTitlePresent() {
+        pause(TimeOut.FIVE_SEC);
         LOGGER.info("Checking is PLP Title present");
         return plpTitle.isElementPresent();
     }

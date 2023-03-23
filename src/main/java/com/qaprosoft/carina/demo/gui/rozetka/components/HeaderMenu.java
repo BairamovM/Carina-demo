@@ -2,6 +2,7 @@ package com.qaprosoft.carina.demo.gui.rozetka.components;
 
 import java.lang.invoke.MethodHandles;
 
+import com.qaprosoft.carina.demo.gui.rozetka.constants.TimeOut;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
@@ -65,6 +66,7 @@ public class HeaderMenu extends AbstractUIObject {
     }
 
     public HamburgerMenu clickHamburgerMenuButton() {
+        pause(TimeOut.FIVE_SEC);
         hamburgerMenuButton.click();
         return hamburgerMenu;
     }
