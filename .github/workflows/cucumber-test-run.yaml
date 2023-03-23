@@ -44,10 +44,10 @@ jobs:
       run: | 
        cd src/main/resources/selenium
        ls
-       java -Dwebdriver.chrome.driver=./chromedriver -jar selenium-server-4.8.1.jar standalone &
+       java -Dwebdriver.firefox.driver=./geckodriver -jar selenium-server-4.8.1.jar standalone &
 
-    - name: Start Selenoid Server
-      uses: Xotabu4/selenoid-github-action@v2
+#    - name: Start Selenoid Server
+#      uses: Xotabu4/selenoid-github-action@v2
 
 #    - name:
 #      run: mvn clean test -Dcucumber.filter.tags="@Brands"
