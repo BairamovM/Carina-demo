@@ -49,6 +49,9 @@ jobs:
     - name: Start Selenoid Server
       uses: Xotabu4/selenoid-github-action@v2
 
+    - name:
+      run: mvn clean test -Dcucumber.filter.tags="@Brands"
+
 
   # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #    - name: Update dependency graph
