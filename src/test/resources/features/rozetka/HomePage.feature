@@ -1,3 +1,4 @@
+@HomePage
 Feature: HomePage
   Checking all functionality, that related with Home Page
 
@@ -11,14 +12,12 @@ Feature: HomePage
   # Test Suites
   #---------------------------------------------------------------------------------------------------------------------
 
-
-
   #---------------------------------------------------------------------------------------------------------------------
   # Test Case ID
   # Test owner - Muslim Bairamov
   @UA
   # Included Environments
-  @HomePage @Searching @Brands
+  @Searching @Brands
   # Test Suites
   #---------------------------------------------------------------------------------------------------------------------
   Scenario Outline: Searching Brands from Home Page

@@ -2,8 +2,10 @@ package com.qaprosoft.carina.demo.rozetka.cucumber.definitions;
 
 import com.qaprosoft.carina.core.foundation.IAbstractTest;
 import com.qaprosoft.carina.core.foundation.webdriver.IDriverPool;
+import com.qaprosoft.carina.demo.gui.rozetka.components.Catalog;
 import com.qaprosoft.carina.demo.gui.rozetka.components.HamburgerMenu;
 import com.qaprosoft.carina.demo.gui.rozetka.components.HeaderMenu;
+import com.qaprosoft.carina.demo.gui.rozetka.enums.MenuCategories;
 import com.qaprosoft.carina.demo.gui.rozetka.pages.HomePage;
 import com.qaprosoft.carina.demo.gui.rozetka.pages.ProductListPage;
 import io.cucumber.java.After;
@@ -59,12 +61,16 @@ public class HomePageSteps extends CommonSteps implements IDriverPool {
 
         HamburgerMenu hamburgerMenu = headerMenu.clickHamburgerMenuButton();
         hamburgerMenu.closeHamburgerMenu();
+
+        Catalog catalog = headerMenu.clickCatalogButton();
+        catalog.clickCategory(MenuCategories.COMPUTERS_NOTEBOOKS);
+        pause(10);
     }
 
-//        @AfterMethod
-//    public void closeBrowser() {
-//        getDriver().close();
-//        getDriver().quit();
-//    }
+    @AfterMethod
+    public void closeBrowser() {
+        getDriver().close();
+        getDriver().quit();
+    }
 
 }

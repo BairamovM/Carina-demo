@@ -28,8 +28,11 @@ public class HeaderMenu extends AbstractUIObject {
     @FindBy(xpath = "//button[@id='fat-menu']")
     private ExtendedWebElement catalogButton;
 
+    @FindBy(xpath = "//ul[contains(@class, 'menu-categories')]")
+    private Catalog catalog;
+
     @FindBy(xpath = "//input[contains(@class, 'search-form__input')]")
-    private ExtendedWebElement search;
+    private ExtendedWebElement searchTextField;
 
     @FindBy(xpath = "//button[contains(@class, 'search-form__submit')]")
     private ExtendedWebElement searchSubmitButton;
@@ -79,16 +82,18 @@ public class HeaderMenu extends AbstractUIObject {
         return catalogButton.isElementPresent();
     }
 
-    public void clickCatalogButton() {
+    public Catalog clickCatalogButton() {
         catalogButton.click();
+        return catalog;
     }
 
     public boolean isSearchPresent() {
-        return search.isElementPresent();
+        return searchTextField.isElementPresent();
     }
 
-    public void searchType(String text) {
-        search.type(text);
+    public void typeSearchField(String text) {
+        LOGGER.info(text);
+        searchTextField.type(text);
     }
 
     public boolean isSearchSubmitButtonPresent() {
@@ -140,8 +145,8 @@ public class HeaderMenu extends AbstractUIObject {
     }
 
     public void searchProduct(String product) {
-        search.type(product);
-        searchSubmitButton.click();
+        typeSearchField(product);
+        clickSearchSubmitButton();
     }
 
 }
