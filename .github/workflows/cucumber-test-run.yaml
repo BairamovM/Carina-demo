@@ -44,7 +44,7 @@ jobs:
       run: | 
        cd src/main/resources/selenium
        ls
-       java -Dwebdriver.firefox.driver=./geckodriver -jar selenium-server-4.8.1.jar standalone &
+       java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-4.8.1.jar standalone &
 
 #    - name: Start Selenoid Server
 #      uses: Xotabu4/selenoid-github-action@v2
