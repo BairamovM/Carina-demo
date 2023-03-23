@@ -62,9 +62,9 @@ public class HomePageSteps extends CommonSteps implements IDriverPool {
         HamburgerMenu hamburgerMenu = headerMenu.clickHamburgerMenuButton();
         hamburgerMenu.closeHamburgerMenu();
 
-        Catalog catalog = headerMenu.clickCatalogButton();
-        catalog.clickCategory(MenuCategories.COMPUTERS_NOTEBOOKS);
-        pause(10);
+//        Catalog catalog = headerMenu.clickCatalogButton();
+//        catalog.clickCategory(MenuCategories.COMPUTERS_NOTEBOOKS);
+//        pause(10);
     }
 
 //    @AfterMethod
