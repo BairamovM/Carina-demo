@@ -41,7 +41,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     -name: Start Selenium Server
-     run:
+     run: |
       cd src/main/resources/selenium
       ls
       java -jar -Dwebdriver.firefox.driver=./geckodriver selenium-server-standalone-3.141.59.jar &
