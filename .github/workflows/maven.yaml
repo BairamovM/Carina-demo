@@ -40,11 +40,11 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    -name: Start Selenium Server
-     run: |
-      cd src/main/resources/selenium
-      ls
-      java -jar -Dwebdriver.firefox.driver=./geckodriver selenium-server-standalone-3.141.59.jar &
+    - name: Start Selenium Server
+      run: | 
+       cd src/main/resources/selenium
+       ls
+       java -jar -Dwebdriver.firefox.driver=./geckodriver selenium-server-standalone-3.141.59.jar &
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #    - name: Update dependency graph
