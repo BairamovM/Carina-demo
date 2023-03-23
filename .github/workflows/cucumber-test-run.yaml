@@ -40,11 +40,14 @@ jobs:
 #    - name: Build with Maven
 #      run: mvn -B package --file pom.xml
 
-    - name: Start Selenium Server
-      run: | 
-       cd src/main/resources/selenium
-       ls
+#    - name: Start Selenium Server
+#      run: |
+#       cd src/main/resources/selenium
+#       ls
 #       java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-4.8.1.jar standalone &
+
+    - name: Pause
+      run: sleep 10
 
     - name: Start Selenoid Server
       uses: Xotabu4/selenoid-github-action@v2

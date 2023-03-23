@@ -67,10 +67,10 @@ public class HomePageSteps extends CommonSteps implements IDriverPool {
         pause(10);
     }
 
-    @AfterMethod
-    public void closeBrowser() {
-        getDriver().close();
-        getDriver().quit();
-    }
+//    @AfterMethod
+//    public void closeBrowser() {
+//        getDriver().close();
+//        getDriver().quit();
+//    }
 
 }
