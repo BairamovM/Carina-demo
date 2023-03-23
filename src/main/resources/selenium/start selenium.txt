@@ -1,0 +1,28 @@
+java -jar -Dwebdriver.chrome.driver=./chromedriver selenium-server-standalone-3.141.59.jar &
+java -jar -Dwebdriver.firefox.driver=./geckodriver selenium-server-standalone-3.141.59.jar &
+
+java -Dwebdriver.firefox.driver=./geckodriver -jar selenium-server-4.8.1.jar standalone &
+java -Dwebdriver.chrome.driver=./chromedriver -jar selenium-server-4.8.1.jar standalone &
+
+
+
+main rule:
+1. We need put chromedriver or geckodriver in the same folder with selenium-server
+2. Open terminal from this folder
+3. Run command
+4. Selenium should run on the port 4444
+
+
+
+links:
+---- geckodriver ----
+https://github.com/mozilla/geckodriver/releases
+
+---- chromedriver ----
+https://chromedriver.chromium.org/downloads
+
+---- selenium documentation ----
+https://www.selenium.dev/documentation/grid/getting_started/
+
+---- Checking if Selenium Server runs correct ----
+http://localhost:4444/ui#
