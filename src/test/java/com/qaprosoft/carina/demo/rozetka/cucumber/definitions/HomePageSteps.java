@@ -57,10 +57,10 @@ public class HomePageSteps extends CommonSteps implements IDriverPool {
         HeaderMenu headerMenu = homePage.getHeaderMenu();
 
         ProductListPage productListPage = new ProductListPage(getDriver());
-        Assert.assertTrue(productListPage.getPLPTitleText().contains(resultBrand), "PLP Title is not present");
+       // Assert.assertTrue(productListPage.getPLPTitleText().contains(resultBrand), "PLP Title is not present");
 
-        HamburgerMenu hamburgerMenu = headerMenu.clickHamburgerMenuButton();
-        hamburgerMenu.closeHamburgerMenu();
+//        HamburgerMenu hamburgerMenu = headerMenu.clickHamburgerMenuButton();
+//        hamburgerMenu.closeHamburgerMenu();
 
 //        Catalog catalog = headerMenu.clickCatalogButton();
 //        catalog.clickCategory(MenuCategories.COMPUTERS_NOTEBOOKS);

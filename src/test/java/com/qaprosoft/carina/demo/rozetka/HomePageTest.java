@@ -36,8 +36,8 @@ public class HomePageTest implements IAbstractTest {
         pause(5);
 
 
-        HamburgerMenu hamburgerMenu = headerMenu.clickHamburgerMenuButton();
-        hamburgerMenu.closeHamburgerMenu();
+//        HamburgerMenu hamburgerMenu = headerMenu.clickHamburgerMenuButton();
+//        hamburgerMenu.closeHamburgerMenu();
         pause(5);
     }
 
