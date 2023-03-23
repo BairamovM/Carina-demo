@@ -37,7 +37,7 @@ jobs:
     - name: Check Google Chrome version
       run: google-chrome --version
 
-    - name: Build with Maven
+#    - name: Build with Maven
 #      run: mvn -B package --file pom.xml
 
     - name: Start Selenium Server
