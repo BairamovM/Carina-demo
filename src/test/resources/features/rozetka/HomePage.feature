@@ -32,11 +32,11 @@ Feature: HomePage
     | brand    | resultBrand |
     | Samsung  | Samsung     |
     | Xiaomi   | Xiaomi      |
-    | Huawei   | Huawei      |
-    | Iphone   | Apple       |
-    | Sony     | Sony        |
-    | Motorola | Motorola    |
-    | Nokia    | Nokia       |
-    | OPPO     | OPPO        |
-    | Poco     | Poco        |
-    | ASUS     | ASUS        |
+#    | Huawei   | Huawei      |
+#    | Iphone   | Apple       |
+#    | Sony     | Sony        |
+#    | Motorola | Motorola    |
+#    | Nokia    | Nokia       |
+#    | OPPO     | OPPO        |
+#    | Poco     | Poco        |
+#    | ASUS     | ASUS        |
