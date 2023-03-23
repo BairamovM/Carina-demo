@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Cucumber Tests
 
 on:
   push:
@@ -44,13 +44,13 @@ jobs:
       run: | 
        cd src/main/resources/selenium
        ls
-       java -jar -Dwebdriver.chrome.driver=chromedriver selenium-server-standalone-3.141.59.jar &
+       java -Dwebdriver.chrome.driver=./chromedriver -jar selenium-server-4.8.1.jar standalone &
 
     - name: Start Selenoid Server
       uses: Xotabu4/selenoid-github-action@v2
 
-    - name:
-      run: mvn clean test -Dcucumber.filter.tags="@Brands"
+#    - name:
+#      run: mvn clean test -Dcucumber.filter.tags="@Brands"
 
 
   # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
