@@ -3,6 +3,7 @@ package com.qaprosoft.carina.demo.gui.rozetka.components;
 import java.lang.invoke.MethodHandles;
 
 import com.qaprosoft.carina.demo.gui.rozetka.constants.TimeOut;
+import com.qaprosoft.carina.demo.gui.rozetka.pages.ProductListPage;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
@@ -146,9 +147,10 @@ public class HeaderMenu extends AbstractUIObject {
         cartButton.click();
     }
 
-    public void searchProduct(String product) {
+    public ProductListPage searchProduct(String product) {
         typeSearchField(product);
         clickSearchSubmitButton();
+        return new ProductListPage(getDriver());
     }
 
 }
