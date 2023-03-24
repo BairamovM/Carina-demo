@@ -11,8 +11,8 @@ name: Cucumber Tests
 on:
   workflow_dispatch:
     inputs:
-      environment:
-        type: environment
+#      environment:
+#        type: environment
 #        description: Whitch test suite to run
 #        required: true
 #        options:
