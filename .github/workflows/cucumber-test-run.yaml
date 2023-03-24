@@ -26,13 +26,8 @@ on:
           - cucumber UI
         default: 'cucumber filters'
 
-
-#    branches: [ "master" ]
-#  pull_request:
-#    branches: [ "master" ]
-
 jobs:
-  build:
+  run-tests:
 
     runs-on: ubuntu-latest
 

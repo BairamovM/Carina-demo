@@ -31,7 +31,6 @@ public class HomePageTest implements IAbstractTest {
         Assert.assertTrue(headerMenu.isMyOrdersButtonPresent(), "MyOrdersButton is not Present");
         Assert.assertTrue(headerMenu.isCartButtonPresent(), "CartButton is not Present");
 
-
         headerMenu.searchProduct("Iphone");
         pause(5);
 

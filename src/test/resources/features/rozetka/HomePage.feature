@@ -32,7 +32,7 @@ Feature: HomePage
     | brand    | resultBrand |
     | Samsung  | Samsung     |
     | Xiaomi   | Xiaomi      |
-#    | Huawei   | Huawei      |
+    | Huawei   | Huawei      |
 #    | Iphone   | Apple       |
 #    | Sony     | Sony        |
 #    | Motorola | Motorola    |
