@@ -11,14 +11,20 @@ name: Cucumber Tests
 on:
   workflow_dispatch:
     inputs:
-      test:
-        type:
+      environment:
+        type: environment
           description: Whitch test suite to run
+          required: true
+          default: 'master'
+        choice:
+          description: Type of test
+          type: choice
           required: true
           options:
             - cucumber filters
             - cucumber API
             - cucumber UI
+          default: 'cucumber filters'
 
 #    branches: [ "master" ]
 #  pull_request:
