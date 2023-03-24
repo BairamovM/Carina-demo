@@ -9,10 +9,20 @@
 name: Cucumber Tests
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  workflow_dispatch:
+    inputs:
+      test:
+        type:
+          description: Whitch test suite to run
+          required: true
+          options:
+            - cucumber filters
+            - cucumber API
+            - cucumber UI
+
+#    branches: [ "master" ]
+#  pull_request:
+#    branches: [ "master" ]
 
 jobs:
   build:
