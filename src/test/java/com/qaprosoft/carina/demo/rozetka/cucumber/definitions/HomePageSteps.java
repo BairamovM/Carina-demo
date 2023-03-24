@@ -3,7 +3,10 @@ package com.qaprosoft.carina.demo.rozetka.cucumber.definitions;
 import org.testng.Assert;
 
 import com.qaprosoft.carina.core.foundation.webdriver.IDriverPool;
+import com.qaprosoft.carina.demo.gui.rozetka.components.Catalog;
+import com.qaprosoft.carina.demo.gui.rozetka.components.HamburgerMenu;
 import com.qaprosoft.carina.demo.gui.rozetka.components.HeaderMenu;
+import com.qaprosoft.carina.demo.gui.rozetka.enums.MenuCategories;
 import com.qaprosoft.carina.demo.gui.rozetka.pages.HomePage;
 import com.qaprosoft.carina.demo.gui.rozetka.pages.ProductListPage;
 
@@ -19,6 +22,8 @@ public class HomePageSteps extends CommonSteps implements IDriverPool {
     HomePage homePage = null;
     HeaderMenu headerMenu = null;
     ProductListPage productListPage = null;
+    HamburgerMenu hamburgerMenu = null;
+    Catalog catalog = null;
 
     @Given(OPEN_HOME_PAGE)
     public void openHomePage() {
@@ -55,12 +60,12 @@ public class HomePageSteps extends CommonSteps implements IDriverPool {
 
         Assert.assertTrue(productListPage.getPLPTitleText().contains(resultBrand), "PLP Title is not present");
 
-//        HamburgerMenu hamburgerMenu = headerMenu.clickHamburgerMenuButton();
-//        hamburgerMenu.closeHamburgerMenu();
+        hamburgerMenu = headerMenu.clickHamburgerMenuButton();
+        hamburgerMenu.closeHamburgerMenu();
 
-//        Catalog catalog = headerMenu.clickCatalogButton();
-//        catalog.clickCategory(MenuCategories.COMPUTERS_NOTEBOOKS);
-//        pause(10);
+        catalog = headerMenu.clickCatalogButton();
+        catalog.clickCategory(MenuCategories.COMPUTERS_NOTEBOOKS);
+        pause(10);
     }
 
 }
