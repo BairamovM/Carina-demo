@@ -13,11 +13,11 @@ on:
     inputs:
       environment:
         type: environment
-        description: Whitch test suite to run
-        required: true
-        options:
-          - master
-        default: 'master'
+#        description: Whitch test suite to run
+#        required: true
+#        options:
+#          - master
+#        default: 'master'
       choice:
         description: Type of test
         type: choice
