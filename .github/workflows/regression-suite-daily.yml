@@ -9,7 +9,7 @@
 name: Regression Suite (Cron daily)
 
 on:
-  schedule:
+ schedule:
     - cron: '10 * * * *'
 
     branches: [ "master" ]
