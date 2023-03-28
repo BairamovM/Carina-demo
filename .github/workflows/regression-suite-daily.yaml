@@ -10,11 +10,11 @@ name: Regression Suite (Cron daily)
 
 on:
   schedule:
-  - cron: '10 * * * *'
+    - cron: '10 * * * *'
 
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+#    branches: [ "master" ]
+#  pull_request:
+#    branches: [ "master" ]
 
 jobs:
   test-schedule:
