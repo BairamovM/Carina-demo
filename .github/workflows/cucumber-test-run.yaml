@@ -25,7 +25,7 @@ on:
         default: 'cucumber TAGS'
 
 jobs:
-  run-tests:
+#  run-tests:
 
   test-schedule:
     runs-on: ubuntu-latest
