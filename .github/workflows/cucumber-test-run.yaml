@@ -23,7 +23,7 @@ on:
         default: 'cucumber TAGS'
 
   schedule:
-    - cron: '0 10 0 ? * * *'
+    - cron: '0 10 0 * * *'
 
 jobs:
   run-tests:
