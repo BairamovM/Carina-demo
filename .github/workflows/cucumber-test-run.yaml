@@ -9,9 +9,6 @@
 name: Cucumber Tests
 
 on:
-  schedule:
-    - cron: '10 * * * *'
-
   workflow_dispatch:
     inputs:
       choice:
@@ -25,9 +22,7 @@ on:
         default: 'cucumber TAGS'
 
 jobs:
-#  run-tests:
-
-  test-schedule:
+  run-tests:
     runs-on: ubuntu-latest
 
     steps:
