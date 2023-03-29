@@ -10,7 +10,7 @@ name: Regression Suite (Cron daily)
 
 on:
   schedule:
-    - cron: '*/50 * * * *'
+    - cron: '* */12 * * *'
 
 jobs:
   test-schedule:
