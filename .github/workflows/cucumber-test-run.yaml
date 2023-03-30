@@ -54,6 +54,9 @@ jobs:
 
     - name: Start Selenoid Server
       uses: Xotabu4/selenoid-github-action@v2
+      with:
+        selenoid-start-arguments: |
+          --browsers 'firefox'
 
     - name: Run Cucumber Tests
       run: mvn clean test -Dcucumber.filter.tags="@Brands"
